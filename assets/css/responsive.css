@@ -1,0 +1,420 @@
+@media (max-width:1399.98px) {
+    .main-nav>ul {
+        gap: 20px
+    }
+
+    .megamenu {
+        left: -60px;
+        width: 920px
+    }
+}
+
+@media (max-width:1199.98px) {
+    .main-nav>ul {
+        gap: 14px
+    }
+
+    .main-nav>ul>li>a {
+        font-size: 12.5px
+    }
+
+    .megamenu {
+        left: -140px;
+        width: 860px
+    }
+
+    .col-categories {
+        flex: 0 0 215px
+    }
+
+    .col-subcategories {
+        flex: 0 0 215px
+    }
+}
+
+@media (max-width:1080px) {
+    .megamenu {
+        left: -200px;
+        width: 800px
+    }
+
+    .col-categories {
+        flex: 0 0 200px
+    }
+
+    .col-subcategories {
+        flex: 0 0 200px
+    }
+}
+
+@media (max-width:991.98px) {
+    .megamenu {
+        display: none !important
+    }
+
+    .site-header .container-xxl {
+        min-height: 66px
+    }
+
+    .brand img {
+        height: 42px
+    }
+
+    .hero-slide {
+        min-height: 460px
+    }
+
+    .about-strip {
+        padding: 48px 0
+    }
+
+    .about-stats-grid {
+        border-left: 0;
+        padding-left: 0;
+        margin: 12px 0
+    }
+
+    .about-stat-column {
+        padding: 0 12px 0 14px
+    }
+
+    .about-building-wrapper {
+        max-width: 320px;
+        margin: 24px auto 0;
+        display: block
+    }
+
+    .industries-copy-col {
+        padding-right: 0;
+        margin-bottom: 24px
+    }
+
+    .case-study-composite {
+        flex-direction: column;
+        gap: 24px
+    }
+
+    .case-study-frame {
+        min-height: 290px
+    }
+
+    .case-stats-panel {
+        flex: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #e5edf5;
+        padding-top: 20px
+    }
+
+    .case-stat-line {
+        display: none
+    }
+
+    .why-features-col {
+        border-left: 0;
+        padding-left: 12px;
+        margin-top: 28px
+    }
+
+    .section {
+        padding: 48px 0
+    }
+
+    .hydro-section {
+        padding: 60px 0
+    }
+
+    .hydro-capability {
+        padding: 30px 24px
+    }
+
+    .hero-btns {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 10px
+    }
+
+    .hero-btns .btn {
+        font-size: 13px;
+        padding: 10px 18px;
+        white-space: nowrap;
+        gap: 8px
+    }
+
+    .hero-btns .btn i {
+        font-size: 12px
+    }
+
+    .p-img {
+        height: 212px
+    }
+}
+
+@media (max-width:767.98px) {
+    .about-stat-column {
+        min-height: 140px
+    }
+
+    .hero-slide {
+        min-height: 420px
+    }
+
+    .hero-copy {
+        padding: 40px 0 70px
+    }
+
+    .hero-copy .lead {
+        font-size: 15px
+    }
+
+    .hero-btns {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 8px;
+        width: 100%;
+        max-width: 100%
+    }
+
+    .hero-btns .btn {
+        font-size: 12px;
+        padding: 9px 12px;
+        white-space: nowrap;
+        gap: 6px;
+        flex: 1 1 0;
+        min-width: 0;
+        justify-content: center;
+        text-align: center
+    }
+
+    .hero-btns .btn:only-child {
+        flex: 0 0 auto
+    }
+
+    .hero-btns .btn i {
+        font-size: 11px
+    }
+
+    .hero .owl-nav {
+        display: flex !important;
+        gap: 12px;
+        bottom: 20px;
+        right: 18px
+    }
+
+    .hero .owl-nav button {
+        font-size: 20px !important
+    }
+
+    .hero .owl-dots {
+        bottom: 20px;
+        left: 18px;
+        gap: 18px
+    }
+
+    .hero .owl-dot span {
+        font-size: 14px
+    }
+
+    .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px
+    }
+
+    .footer-bottom {
+        flex-direction: column
+    }
+
+    .footer-bottom a:first-child {
+        margin-left: 0
+    }
+}
+
+@media (max-width:575.98px) {
+    .container-xxl {
+        padding-left: 18px;
+        padding-right: 18px
+    }
+
+    .about-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px
+    }
+
+    .about-stat-column {
+        padding: 0 6px;
+        border-right: 0;
+        min-height: auto
+    }
+
+    .stat-number {
+        font-size: 24px
+    }
+
+    .stat-label {
+        font-size: 11px
+    }
+
+    .stat-empty {
+        display: none
+    }
+
+    .about-building-wrapper {
+        max-width: 360px;
+        margin: 20px auto 0
+    }
+
+    .about-building-frame {
+        height: 245px;
+        border-radius: 22px
+    }
+
+    .about-floating-card {
+        padding: 10px 14px 10px 16px;
+        border-radius: 15px;
+        gap: 12px;
+        right: -2px;
+        bottom: -2px
+    }
+
+    .about-floating-text {
+        font-size: 12px
+    }
+
+    .about-floating-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 12px
+    }
+
+    .case-study-frame {
+        min-height: 280px;
+        transform: none;
+        border-radius: 20px
+    }
+
+    .case-study-photo {
+        width: 100%;
+        transform: none;
+        object-position: 70% 45%
+    }
+
+    .case-study-inner {
+        transform: none;
+        padding: 26px 20px
+    }
+
+    .case-study-header {
+        font-size: 20px;
+        margin-bottom: 18px
+    }
+
+    .case-study-action {
+        font-size: 12px;
+        padding: 9px 18px
+    }
+
+    .case-stats-panel {
+        flex-wrap: wrap;
+        gap: 16px
+    }
+
+    .case-stat-value {
+        font-size: 30px
+    }
+
+    .why-features-list {
+        gap: 14px
+    }
+
+    .why-icon-badge {
+        width: 36px;
+        height: 36px;
+        font-size: 16px
+    }
+
+    .btn-explore-ind {
+        width: 100%
+    }
+
+    .btn-pill-blue {
+        width: 100%;
+        justify-content: center
+    }
+
+    .cta .btn-white,
+    .cta .btn-outline-white {
+        width: 100%;
+        justify-content: center
+    }
+
+    .cta .d-flex {
+        width: 100%
+    }
+
+    .hydro-section {
+        padding: 44px 0
+    }
+
+    .hydro-capability {
+        padding: 24px 18px;
+        border-radius: 16px
+    }
+
+    .hydro-capability h3 {
+        font-size: 1.4rem
+    }
+
+    .hydro-capability .metric {
+        font-size: 1.8rem
+    }
+
+    .hydro-note {
+        padding: 16px 18px
+    }
+
+    .hero-btns {
+        gap: 6px
+    }
+
+    .hero-btns .btn {
+        font-size: 11.5px;
+        padding: 8px 8px;
+        gap: 4px;
+        letter-spacing: -.01em
+    }
+
+    .hero-btns .btn i {
+        font-size: 10px;
+        margin-left: 1px
+    }
+
+    .industry-nav-btns {
+        gap: 6px
+    }
+
+    .ind-nav-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 12px
+    }
+}
+
+@media (max-width:380px) {
+    .hero-btns {
+        gap: 4px
+    }
+
+    .hero-btns .btn {
+        font-size: 10px;
+        padding: 7px 5px;
+        gap: 3px
+    }
+
+    .hero-btns .btn i {
+        display: none
+    }
+}
