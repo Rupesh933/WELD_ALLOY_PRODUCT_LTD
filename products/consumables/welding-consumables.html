@@ -1,0 +1,1143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Welding Consumables | Weld Alloy Products Ltd.</title>
+
+    <meta
+      name="description"
+      content="Explore welding consumable product families including stick electrodes, TIG rods, solid wires, flux-cored wires, submerged arc wires and specialist welding consumables."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Page is:
+         /products/consumables/welding-consumables.html
+
+         Root assets are:
+         /assets/...
+
+         Therefore:
+         ../../assets/...
+    -->
+
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../../assets/css/product-family.css" />
+
+    <style>
+      /* -----------------------------------------
+         WELDING CONSUMABLES PRODUCT GRID
+      ----------------------------------------- */
+
+      .wc-products-section {
+        padding: 72px 0 80px;
+        background: #fff;
+      }
+
+      .wc-products-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 30px;
+        margin-bottom: 30px;
+      }
+
+      .wc-products-head h2 {
+        color: var(--navy);
+        font-size: 32px;
+        line-height: 1.15;
+        font-weight: 800;
+        margin: 6px 0 0;
+      }
+
+      .wc-products-head p {
+        max-width: 500px;
+        color: var(--muted);
+        font-size: 12.5px;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .wc-product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      .wc-product-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 235px;
+        padding: 24px;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        text-decoration: none;
+        overflow: hidden;
+        transition:
+          transform 0.24s ease,
+          box-shadow 0.24s ease,
+          border-color 0.24s ease;
+      }
+
+      .wc-product-card::after {
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        right: -65px;
+        bottom: -65px;
+        border-radius: 50%;
+        background: #edf7fd;
+        transition: transform 0.3s ease;
+      }
+
+      .wc-product-card:hover {
+        transform: translateY(-4px);
+        border-color: #bfe0f3;
+        box-shadow: 0 14px 30px rgba(10, 35, 65, 0.08);
+      }
+
+      .wc-product-card:hover::after {
+        transform: scale(1.25);
+      }
+
+      .wc-product-number {
+        position: absolute;
+        right: 18px;
+        top: 16px;
+        color: #b7c5d1;
+        font-size: 9px;
+        font-weight: 800;
+        z-index: 2;
+      }
+
+      .wc-product-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: #eaf6fd;
+        color: var(--blue);
+        font-size: 19px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .wc-product-card h3 {
+        color: var(--navy);
+        font-size: 16px;
+        line-height: 1.3;
+        font-weight: 800;
+        margin: 18px 0 8px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .wc-product-card p {
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.65;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+      }
+
+      .wc-product-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        margin-top: auto;
+        padding-top: 18px;
+        color: var(--blue);
+        font-size: 10px;
+        font-weight: 800;
+        position: relative;
+        z-index: 2;
+      }
+
+      .wc-product-link i {
+        transition: transform 0.2s ease;
+      }
+
+      .wc-product-card:hover .wc-product-link i {
+        transform: translateX(4px);
+      }
+
+      /* -----------------------------------------
+         PRODUCT ROUTE SECTION
+      ----------------------------------------- */
+
+      .wc-route-section {
+        padding: 58px 0;
+        background: var(--tint);
+      }
+
+      .wc-route-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 30px;
+        align-items: stretch;
+      }
+
+      .wc-route-copy h2 {
+        color: var(--navy);
+        font-size: 31px;
+        line-height: 1.16;
+        font-weight: 800;
+        margin: 7px 0 12px;
+      }
+
+      .wc-route-copy p {
+        max-width: 680px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.75;
+        margin: 0;
+      }
+
+      .wc-route-points {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9px;
+        margin-top: 22px;
+      }
+
+      .wc-route-points span {
+        padding: 11px 12px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        background: #fff;
+        color: var(--navy);
+        font-size: 10px;
+        font-weight: 800;
+      }
+
+      .wc-route-panel {
+        padding: 28px;
+        border: 1px solid #dbe9f2;
+        border-radius: 16px;
+        background: #fff;
+      }
+
+      .wc-route-panel small {
+        color: var(--blue);
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+      }
+
+      .wc-route-panel h3 {
+        color: var(--navy);
+        font-size: 22px;
+        font-weight: 800;
+        margin: 8px 0 18px;
+      }
+
+      .wc-breadcrumb-route {
+        display: grid;
+        gap: 9px;
+      }
+
+      .wc-breadcrumb-route a,
+      .wc-breadcrumb-route div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 12px;
+        border: 1px solid #e5edf4;
+        border-radius: 9px;
+        color: var(--navy);
+        font-size: 10.5px;
+        font-weight: 800;
+      }
+
+      .wc-breadcrumb-route span {
+        width: 25px;
+        height: 25px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: #edf6fb;
+        color: var(--blue);
+        font-size: 9px;
+        flex-shrink: 0;
+      }
+
+      /* -----------------------------------------
+         RESPONSIVE
+      ----------------------------------------- */
+
+      @media (max-width: 991.98px) {
+        .wc-product-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .wc-route-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .wc-products-head {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .wc-product-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .wc-route-points {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================================
+         TOP BAR
+    ========================================== -->
+
+    <div class="topbar d-none d-lg-block">
+      <div class="container-xxl text-end">
+        Quality <span>|</span> Reliability <span>|</span> Stronger Connections
+      </div>
+    </div>
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+      <div
+        class="container-xxl d-flex align-items-center justify-content-between"
+      >
+        <a class="brand" href="../../index.html">
+          <img
+            src="../../assets/images/logo.webp"
+            alt="Weld Alloy Products Ltd."
+          />
+        </a>
+
+        <nav class="main-nav d-none d-lg-block" aria-label="Main">
+          <ul>
+            <li>
+              <a href="../../index.html"> Home </a>
+            </li>
+
+            <li class="has-dropdown">
+              <a href="../../products.html" class="active">
+                Products
+                <i class="bi bi-chevron-down"></i>
+              </a>
+
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="../consumables.html"> Consumables </a>
+                </li>
+
+                <li>
+                  <a href="../welding-equipment.html"> Welding Equipment </a>
+                </li>
+
+                <li>
+                  <a href="../personal-protection.html">
+                    Personal Protection
+                  </a>
+                </li>
+
+                <li>
+                  <a href="../accessories-tools.html">
+                    Accessories &amp; Tools
+                  </a>
+                </li>
+
+                <li>
+                  <a href="../welding-automation.html"> Welding Automation </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="../../industries.html"> Industries </a>
+            </li>
+
+            <li class="has-dropdown">
+              <a href="../../resources.html">
+                Resources
+                <i class="bi bi-chevron-down"></i>
+              </a>
+
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="../../blogs.html"> Blogs </a>
+                </li>
+
+                <li>
+                  <a href="../../case-studies.html"> Case Studies </a>
+                </li>
+
+                <li>
+                  <a href="../../resources.html"> Product Catalogue </a>
+                </li>
+
+                <li>
+                  <a href="../../resources.html"> Technical Documents </a>
+                </li>
+
+                <li>
+                  <a href="../../faqs.html"> FAQs </a>
+                </li>
+
+                <li>
+                  <a href="../../media-events.html"> Media &amp; Events </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="has-dropdown">
+              <a href="../../about.html">
+                About Us
+                <i class="bi bi-chevron-down"></i>
+              </a>
+
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="../../about.html"> About Us </a>
+                </li>
+
+                <li>
+                  <a href="../../certifications.html"> Certifications </a>
+                </li>
+
+                <li>
+                  <a href="../../testimonials.html"> Testimonials </a>
+                </li>
+
+                <li>
+                  <a href="../../careers.html"> Careers </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="../../contact.html"> Contact Us </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions d-flex align-items-center gap-3">
+          <a
+            href="../../contact.html#contact-form"
+            class="btn btn-wa d-none d-sm-inline-flex"
+          >
+            Enquire Now
+            <i class="bi bi-arrow-right"></i>
+          </a>
+
+          <button
+            class="menu-toggle d-lg-none"
+            id="menuToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================
+         MOBILE MENU
+    ========================================== -->
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-head">
+        <img
+          src="../../assets/images/logo.webp"
+          alt="Weld Alloy Products Ltd."
+        />
+
+        <button class="menu-close" id="menuClose" aria-label="Close menu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <ul class="mobile-links">
+        <li>
+          <a href="../../index.html"> Home </a>
+        </li>
+
+        <li>
+          <a href="../../products.html" class="active"> Products </a>
+        </li>
+
+        <li>
+          <a href="../../industries.html"> Industries </a>
+        </li>
+
+        <li>
+          <a href="../../resources.html"> Resources </a>
+        </li>
+
+        <li>
+          <a href="../../about.html"> About Us </a>
+        </li>
+
+        <li>
+          <a href="../../contact.html"> Contact Us </a>
+        </li>
+      </ul>
+
+      <a href="../../contact.html#contact-form" class="btn btn-wa w-100 mt-3">
+        Enquire Now
+        <i class="bi bi-arrow-right"></i>
+      </a>
+    </aside>
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main>
+      <!-- =======================================
+           HERO
+      ======================================== -->
+
+      <section class="product-family-hero">
+        <div class="container-xxl">
+          <div class="product-crumb">
+            <a href="../../products.html"> Products </a>
+
+            <span>/</span>
+
+            <a href="../consumables.html"> Consumables </a>
+
+            <span>/</span>
+
+            Welding Consumables
+          </div>
+
+          <div class="product-hero-grid">
+            <!-- HERO COPY -->
+
+            <div>
+              <span class="product-family-eyebrow">
+                PRODUCTS · CONSUMABLES · WELDING CONSUMABLES
+              </span>
+
+              <h1>Welding consumables for demanding industrial work.</h1>
+
+              <p class="product-hero-copy">
+                Explore the WAPL welding consumable hierarchy, from electrodes
+                and filler wires to flux systems and specialist consumable
+                solutions.
+              </p>
+
+              <div class="product-hero-actions">
+                <a href="#product-range" class="btn btn-wa">
+                  Explore Product Range
+                  <i class="bi bi-arrow-down"></i>
+                </a>
+
+                <a
+                  href="../../contact.html#contact-form"
+                  class="product-text-link"
+                >
+                  Talk to an Expert
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- HERO PANEL -->
+
+            <div class="product-hero-panel">
+              <small> WELDING CONSUMABLES </small>
+
+              <strong> Choose the right product family </strong>
+
+              <p>
+                Start with the consumable type and continue to the individual
+                product page.
+              </p>
+
+              <div class="product-panel-list">
+                <span> Stick Electrodes </span>
+
+                <span> TIG Rods </span>
+
+                <span> Solid Wires </span>
+
+                <span> Flux-Cored Wires </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================
+           PRODUCT RANGE
+      ======================================== -->
+
+      <section id="product-range" class="wc-products-section">
+        <div class="container-xxl">
+          <div class="wc-products-head">
+            <div>
+              <span class="kicker"> PRODUCT RANGE </span>
+
+              <h2>Explore welding consumable families</h2>
+            </div>
+
+            <p>
+              Select a product family to move deeper into the WAPL product
+              hierarchy and review the relevant product information.
+            </p>
+          </div>
+
+          <div class="wc-product-grid">
+            <!-- 01 -->
+
+            <a
+              class="wc-product-card"
+              href="welding-consumables/stick-electrodes.html"
+            >
+              <span class="wc-product-number"> 01 </span>
+
+              <div class="wc-product-icon">
+                <i class="bi bi-lightning-charge"></i>
+              </div>
+
+              <h3>Stick Electrodes</h3>
+
+              <p>
+                Explore the stick electrode product route for industrial welding
+                applications.
+              </p>
+
+              <span class="wc-product-link">
+                View products
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+
+            <!-- 02 -->
+
+            <a class="wc-product-card" href="welding-consumables/tig-rods.html">
+              <span class="wc-product-number"> 02 </span>
+
+              <div class="wc-product-icon">
+                <i class="bi bi-bezier2"></i>
+              </div>
+
+              <h3>TIG Rods</h3>
+
+              <p>
+                Explore TIG filler rod products and related welding consumable
+                information.
+              </p>
+
+              <span class="wc-product-link">
+                View products
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+
+            <!-- 03 -->
+
+            <a
+              class="wc-product-card"
+              href="welding-consumables/solid-wires.html"
+            >
+              <span class="wc-product-number"> 03 </span>
+
+              <div class="wc-product-icon">
+                <i class="bi bi-circle"></i>
+              </div>
+
+              <h3>Solid Wires</h3>
+
+              <p>
+                Explore solid wire product families and their intended
+                industrial application routes.
+              </p>
+
+              <span class="wc-product-link">
+                View products
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+
+            <!-- 04 -->
+
+            <a
+              class="wc-product-card"
+              href="welding-consumables/gas-shielded-flux-cored-wires.html"
+            >
+              <span class="wc-product-number"> 04 </span>
+
+              <div class="wc-product-icon">
+                <i class="bi bi-wind"></i>
+              </div>
+
+              <h3>Gas-Shielded Flux-Cored Wires</h3>
+
+              <p>
+                Explore gas-shielded flux-cored welding wire product
+                information.
+              </p>
+
+              <span class="wc-product-link">
+                View products
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+
+            <!-- 05 -->
+
+            <a
+              class="wc-product-card"
+              href="welding-consumables/self-shielded-flux-cored-wires.html"
+            >
+              <span class="wc-product-number"> 05 </span>
+
+              <div class="wc-product-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+
+              <h3>Self-Shielded Flux-Cored Wires</h3>
+
+              <p>
+                Explore self-shielded flux-cored welding wire product
+                information.
+              </p>
+
+              <span class="wc-product-link">
+                View products
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+
+            <!-- 06 -->
+
+            <a
+              class="wc-product-card"
+              href="welding-consumables/submerged-arc-wires-fluxes.html"
+            >
+              <span class="wc-product-number"> 06 </span>
+
+              <div class="wc-product-icon">
+                <i class="bi bi-layers"></i>
+              </div>
+
+              <h3>Submerged Arc Wires &amp; Fluxes</h3>
+
+              <p>
+                Explore submerged arc wire and flux product families within the
+                welding consumables range.
+              </p>
+
+              <span class="wc-product-link">
+                View products
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+
+            <!-- 07 -->
+
+            <a
+              class="wc-product-card"
+              href="welding-consumables/strip-cladding.html"
+            >
+              <span class="wc-product-number"> 07 </span>
+
+              <div class="wc-product-icon">
+                <i class="bi bi-distribute-horizontal"></i>
+              </div>
+
+              <h3>Strip Cladding</h3>
+
+              <p>
+                Explore the strip cladding product route and related consumable
+                information.
+              </p>
+
+              <span class="wc-product-link">
+                View products
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+
+            <!-- 08 -->
+
+            <a
+              class="wc-product-card"
+              href="welding-consumables/wire-arc-additive-manufacturing.html"
+            >
+              <span class="wc-product-number"> 08 </span>
+
+              <div class="wc-product-icon">
+                <i class="bi bi-boxes"></i>
+              </div>
+
+              <h3>Wire Arc Additive Manufacturing</h3>
+
+              <p>
+                Explore the product route for wire-based additive manufacturing
+                applications.
+              </p>
+
+              <span class="wc-product-link">
+                View products
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+
+            <!-- 09 -->
+
+            <a
+              class="wc-product-card"
+              href="welding-consumables/metal-powders.html"
+            >
+              <span class="wc-product-number"> 09 </span>
+
+              <div class="wc-product-icon">
+                <i class="bi bi-powder"></i>
+              </div>
+
+              <h3>Metal Powders</h3>
+
+              <p>
+                Explore metal powder product information within the welding
+                consumable hierarchy.
+              </p>
+
+              <span class="wc-product-link">
+                View products
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+
+            <!-- 10 -->
+
+            <a
+              class="wc-product-card"
+              href="welding-consumables/arc-spraying-cored-wires.html"
+            >
+              <span class="wc-product-number"> 10 </span>
+
+              <div class="wc-product-icon">
+                <i class="bi bi-stars"></i>
+              </div>
+
+              <h3>Arc Spraying Cored Wires</h3>
+
+              <p>
+                Explore cored wire products associated with arc spraying
+                applications.
+              </p>
+
+              <span class="wc-product-link">
+                View products
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+
+            <!-- 11 -->
+
+            <a
+              class="wc-product-card"
+              href="welding-consumables/ceramic-weld-backing.html"
+            >
+              <span class="wc-product-number"> 11 </span>
+
+              <div class="wc-product-icon">
+                <i class="bi bi-grid-3x3-gap"></i>
+              </div>
+
+              <h3>Ceramic Weld Backing</h3>
+
+              <p>
+                Explore ceramic weld backing products and the related product
+                information route.
+              </p>
+
+              <span class="wc-product-link">
+                View products
+                <i class="bi bi-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================
+           SELECTION / NAVIGATION
+      ======================================== -->
+
+      <section class="wc-route-section">
+        <div class="container-xxl">
+          <div class="wc-route-grid">
+            <div class="wc-route-copy">
+              <span class="kicker"> PRODUCT SELECTION </span>
+
+              <h2>Start with the welding process and product family.</h2>
+
+              <p>
+                The product hierarchy is designed to help visitors move from the
+                broad welding consumable category to the specific product they
+                need.
+              </p>
+
+              <div class="wc-route-points">
+                <span> Stick Electrodes </span>
+
+                <span> TIG Rods </span>
+
+                <span> Solid Wires </span>
+
+                <span> Flux-Cored Wires </span>
+
+                <span> SAW Wires &amp; Fluxes </span>
+
+                <span> Specialist Consumables </span>
+              </div>
+            </div>
+
+            <div class="wc-route-panel">
+              <small> NAVIGATION PATH </small>
+
+              <h3>Where you are</h3>
+
+              <div class="wc-breadcrumb-route">
+                <div>
+                  <span>01</span>
+                  Products
+                </div>
+
+                <div>
+                  <span>02</span>
+                  Consumables
+                </div>
+
+                <div>
+                  <span>03</span>
+                  Welding Consumables
+                </div>
+
+                <div>
+                  <span>04</span>
+                  Individual Product
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================
+         CTA
+    ========================================== -->
+
+    <section class="cta">
+      <div
+        class="container-xxl d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4"
+      >
+        <h2>
+          Have a Welding Challenge?
+          <br />
+          Let's Find the Right Solution.
+        </h2>
+
+        <div class="d-flex flex-wrap gap-3">
+          <a href="../../contact.html#contact-form" class="btn btn-white">
+            Request a Quote
+            <i class="bi bi-arrow-right"></i>
+          </a>
+
+          <a
+            href="../../contact.html#contact-form"
+            class="btn btn-outline-white"
+          >
+            Talk to Our Experts
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+      <div class="container-xxl">
+        <div class="row g-4">
+          <!-- BRAND -->
+
+          <div class="col-lg-4">
+            <img
+              src="../../assets/images/logo.webp"
+              alt="Weld Alloy Products Ltd."
+              class="footer-logo"
+            />
+
+            <p class="mt-3">
+              Advanced welding consumables for a stronger, more connected world.
+            </p>
+          </div>
+
+          <!-- PRODUCTS -->
+
+          <div class="col-6 col-lg-2">
+            <h4>Products</h4>
+
+            <ul>
+              <li>
+                <a href="../consumables.html"> Consumables </a>
+              </li>
+
+              <li>
+                <a href="../welding-equipment.html"> Welding Equipment </a>
+              </li>
+
+              <li>
+                <a href="../personal-protection.html"> Personal Protection </a>
+              </li>
+
+              <li>
+                <a href="../accessories-tools.html">
+                  Accessories &amp; Tools
+                </a>
+              </li>
+
+              <li>
+                <a href="../welding-automation.html"> Welding Automation </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- INDUSTRIES -->
+
+          <div class="col-6 col-lg-2">
+            <h4>Industries</h4>
+
+            <ul>
+              <li>
+                <a href="../../industries.html"> Industries </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- RESOURCES -->
+
+          <div class="col-6 col-lg-2">
+            <h4>Resources</h4>
+
+            <ul>
+              <li>
+                <a href="../../blogs.html"> Blogs </a>
+              </li>
+
+              <li>
+                <a href="../../case-studies.html"> Case Studies </a>
+              </li>
+
+              <li>
+                <a href="../../resources.html"> Product Catalogue </a>
+              </li>
+
+              <li>
+                <a href="../../resources.html"> Technical Documents </a>
+              </li>
+
+              <li>
+                <a href="../../faqs.html"> FAQs </a>
+              </li>
+
+              <li>
+                <a href="../../media-events.html"> Media &amp; Events </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- COMPANY -->
+
+          <div class="col-6 col-lg-2">
+            <h4>Company</h4>
+
+            <ul>
+              <li>
+                <a href="../../about.html"> About Us </a>
+              </li>
+
+              <li>
+                <a href="../../certifications.html"> Certifications </a>
+              </li>
+
+              <li>
+                <a href="../../testimonials.html"> Testimonials </a>
+              </li>
+
+              <li>
+                <a href="../../careers.html"> Careers </a>
+              </li>
+
+              <li>
+                <a href="../../contact.html"> Contact Us </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span> © 2026 Weld Alloy Products Ltd. All rights reserved. </span>
+
+          <span>
+            <a href="../../contact.html"> Contact </a>
+
+            <a href="../../resources.html"> Resources </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../../assets/js/custom.js"></script>
+  </body>
+</html>
