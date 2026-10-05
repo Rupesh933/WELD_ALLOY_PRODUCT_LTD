@@ -32,6 +32,79 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/product.css" />
+    <style>
+      .list-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .list-toolbar p {
+        margin: 0;
+      }
+
+      .list-toolbar select {
+        min-width: 180px;
+      }
+
+      .product-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+      }
+
+      .page-btn {
+        border: 1px solid #d9dce3;
+        background: #fff;
+        color: #1d1d1f;
+        border-radius: 999px;
+        padding: 10px 16px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.25s ease;
+      }
+
+      .page-btn:hover:not(:disabled) {
+        border-color: #c1985a;
+        color: #c1985a;
+      }
+
+      .page-btn:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      .page-btn-number {
+        min-width: 42px;
+        padding: 9px 10px;
+      }
+
+      .page-btn-number.is-active {
+        background: #c1985a;
+        border-color: #c1985a;
+        color: #fff;
+      }
+
+      .page-numbers {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 767px) {
+        .list-toolbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Top bar -->
@@ -643,13 +716,16 @@
             </aside>
             <div>
               <div class="list-toolbar">
-                <p>Showing <strong>6</strong> products</p>
+                <p>
+                  Showing <strong id="productRangeText">1-3</strong> of
+                  <strong id="productTotalText">6</strong> products
+                </p>
                 <select aria-label="Sort products">
                   <option>Sort: Name (A-Z)</option>
                   <option>Sort: Classification</option>
                 </select>
               </div>
-              <div class="pl-grid">
+              <div class="pl-grid" id="productGrid">
                 <a href="product_detail.html" class="pl-card"
                   ><div
                     class="pl-img"
@@ -752,6 +828,19 @@
                     ></span></div
                 ></a>
               </div>
+
+              <nav
+                class="product-pagination"
+                aria-label="Product pagination"
+              >
+                <button type="button" class="page-btn prev-btn" aria-label="Previous page">
+                  Previous
+                </button>
+                <div class="page-numbers" id="productPagination"></div>
+                <button type="button" class="page-btn next-btn" aria-label="Next page">
+                  Next
+                </button>
+              </nav>
             </div>
           </div>
         </div>
@@ -900,5 +989,83 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+      (function () {
+        var $cards = $('.pl-card');
+
+        if (!$cards.length) {
+          return;
+        }
+
+        var pageSize = 3;
+        var totalPages = Math.ceil($cards.length / pageSize);
+        var currentPage = 1;
+        var $pagination = $('#productPagination');
+        var $prevButton = $('.prev-btn');
+        var $nextButton = $('.next-btn');
+        var $rangeText = $('#productRangeText');
+        var $totalText = $('#productTotalText');
+
+        function renderPagination() {
+          $pagination.empty();
+
+          for (var pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
+            var $pageButton = $('<button>', {
+              type: 'button',
+              class: 'page-btn page-btn-number',
+              text: pageNumber,
+              'aria-label': 'Go to page ' + pageNumber,
+              'data-page': pageNumber
+            });
+
+            if (pageNumber === currentPage) {
+              $pageButton.addClass('is-active');
+            }
+
+            $pagination.append($pageButton);
+          }
+        }
+
+        function updateProducts() {
+          var startIndex = (currentPage - 1) * pageSize;
+          var endIndex = startIndex + pageSize;
+          var visibleStart = startIndex + 1;
+          var visibleEnd = Math.min(endIndex, $cards.length);
+
+          $cards.hide().slice(startIndex, endIndex).show();
+
+          $rangeText.text(visibleStart + '-' + visibleEnd);
+          $totalText.text($cards.length);
+
+          $prevButton.prop('disabled', currentPage === 1);
+          $nextButton.prop('disabled', currentPage === totalPages);
+
+          $('.page-btn-number').removeClass('is-active');
+          $('.page-btn-number[data-page="' + currentPage + '"]').addClass('is-active');
+        }
+
+        renderPagination();
+        updateProducts();
+
+        $('.page-btn-number').on('click', function () {
+          currentPage = Number($(this).data('page'));
+          updateProducts();
+        });
+
+        $prevButton.on('click', function () {
+          if (currentPage > 1) {
+            currentPage -= 1;
+            updateProducts();
+          }
+        });
+
+        $nextButton.on('click', function () {
+          if (currentPage < totalPages) {
+            currentPage += 1;
+            updateProducts();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

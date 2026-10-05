@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media &amp; Events | Weld Alloy Products Ltd.</title>
+  <meta name="description" content="Media coverage, exhibitions, events and company updates from Weld Alloy Products Ltd.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/media-events.css">
+</head>
+
+<body>
+  <div class="topbar d-none d-lg-block">
+    <div class="container-xxl text-end">
+      Quality <span>|</span> Reliability <span>|</span> Stronger Connections
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container-xxl d-flex align-items-center justify-content-between">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo.webp" alt="Weld Alloy Product Ltd.">
+      </a>
+
+      <nav class="main-nav d-none d-lg-block" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+
+          <li class="has-dropdown">
+            <a href="products.html">Products <i class="bi bi-chevron-down"></i></a>
+            <ul class="nav-dropdown">
+              <li><a href="products.html">Welding Consumables</a></li>
+              <li><a href="products.html">Brazing Consumables</a></li>
+              <li><a href="products.html">Welding Equipment</a></li>
+              <li><a href="products.html">Accessories &amp; Tools</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="industries.html">Industries <i class="bi bi-chevron-down"></i></a>
+            <ul class="nav-dropdown">
+              <li><a href="industries.html">Steel &amp; Metal</a></li>
+              <li><a href="industries.html">Power</a></li>
+              <li><a href="industries.html">Oil &amp; Gas</a></li>
+              <li><a href="industries.html">Railways</a></li>
+              <li><a href="industries.html">Heavy Engineering</a></li>
+              <li><a href="industries.html">Mining</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="#" class="active">Resources <i class="bi bi-chevron-down"></i></a>
+            <ul class="nav-dropdown">
+              <li><a href="blogs.html">Blogs</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Product Catalogue</a></li>
+              <li><a href="#">Technical Documents</a></li>
+              <li><a href="faqs.html">FAQs</a></li>
+              <li><a class="active" href="media-events.html">Media &amp; Events</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="about.html">About Us <i class="bi bi-chevron-down"></i></a>
+            <ul class="nav-dropdown">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="certifications.html">Certifications</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions d-flex align-items-center gap-3">
+        <button class="icon-btn d-none d-lg-inline-flex" aria-label="Search">
+          <i class="bi bi-search"></i>
+        </button>
+        <a href="#contact" class="btn btn-wa d-none d-sm-inline-flex">
+          Enquire Now <i class="bi bi-arrow-right"></i>
+        </a>
+        <button class="menu-toggle d-lg-none" id="menuToggle" aria-label="Open menu"
+          aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-head">
+      <img src="assets/images/logo.webp" alt="Weld Alloy Product Ltd.">
+      <button class="menu-close" id="menuClose" aria-label="Close menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <ul class="mobile-links">
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="#" class="has-sub">Products <i class="bi bi-chevron-down"></i></a>
+        <ul class="sub">
+          <li><a href="products.html">Welding Consumables</a></li>
+          <li><a href="products.html">Brazing Consumables</a></li>
+          <li><a href="products.html">Welding Equipment</a></li>
+          <li><a href="products.html">Accessories &amp; Tools</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="has-sub">Industries <i class="bi bi-chevron-down"></i></a>
+        <ul class="sub">
+          <li><a href="industries.html">Steel &amp; Metal</a></li>
+          <li><a href="industries.html">Power</a></li>
+          <li><a href="industries.html">Oil &amp; Gas</a></li>
+          <li><a href="industries.html">Railways</a></li>
+          <li><a href="industries.html">Heavy Engineering</a></li>
+          <li><a href="industries.html">Mining</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="has-sub">Resources <i class="bi bi-chevron-down"></i></a>
+        <ul class="sub">
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Product Catalogue</a></li>
+          <li><a href="#">Technical Documents</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="media-events.html">Media &amp; Events</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="has-sub">About Us <i class="bi bi-chevron-down"></i></a>
+        <ul class="sub">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+
+    <a href="#contact" class="btn btn-wa w-100 mt-3">
+      Enquire Now <i class="bi bi-arrow-right"></i>
+    </a>
+  </aside>
+
+  <main>
+    <section class="page-banner">
+      <div class="container-xxl">
+        <div class="breadcrumb-trail">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="#">Resources</a>
+          <span>/</span>
+          Media &amp; Events
+        </div>
+        <h1>Media &amp; Events</h1>
+        <p>
+          Follow WAPL's exhibitions, industry engagement, media moments and
+          company updates.
+        </p>
+      </div>
+    </section>
+
+    <section class="media-intro section">
+      <div class="container-xxl">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-7">
+            <span class="kicker">MEDIA &amp; EVENTS</span>
+            <h2>Where industry conversations meet stronger connections.</h2>
+            <p>
+              From exhibitions and customer engagement to technical conversations
+              and company updates, this space brings WAPL's external activities
+              together in one place.
+            </p>
+            <div class="media-highlights">
+              <div>
+                <span class="media-number">01</span>
+                <strong>Exhibitions</strong>
+                <small>Showcase products, applications and capabilities.</small>
+              </div>
+              <div>
+                <span class="media-number">02</span>
+                <strong>Industry Engagement</strong>
+                <small>Meet customers, partners and technical teams.</small>
+              </div>
+              <div>
+                <span class="media-number">03</span>
+                <strong>Company Updates</strong>
+                <small>Share milestones, announcements and media moments.</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="media-summary">
+              <span class="panel-kicker">IN THE SPOTLIGHT</span>
+              <div class="summary-date">12 SEP 2026</div>
+              <h3>Weld Alloy at India Welding Expo 2026</h3>
+              <p>
+                The current WAPL homepage highlights participation in India
+                Welding Expo 2026. Use this page to expand the event into a
+                dedicated update, gallery and enquiry opportunity.
+              </p>
+              <a href="#events" class="btn btn-white">
+                Explore Events <i class="bi bi-arrow-down"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="event-section section-tint" id="events">
+      <div class="container-xxl py-5 py-lg-5">
+        <div class="section-head mb-4">
+          <div>
+            <span class="kicker">EVENTS</span>
+            <h2>Exhibitions &amp; industry engagements</h2>
+          </div>
+          <div class="event-filter-group">
+            <button class="event-filter active" type="button" data-filter="all">All</button>
+            <button class="event-filter" type="button" data-filter="upcoming">Upcoming</button>
+            <button class="event-filter" type="button" data-filter="past">Past</button>
+          </div>
+        </div>
+
+        <div class="row g-4" id="eventGrid">
+          <div class="col-md-6 col-lg-4 event-col" data-status="past">
+            <article class="event-card">
+              <div class="event-image event-image-1">
+                <span class="event-state">Featured Event</span>
+              </div>
+              <div class="event-body">
+                <div class="event-topline">
+                  <time datetime="2026-09-12">12 Sep 2026</time>
+                  <span>Exhibition</span>
+                </div>
+                <h3>Weld Alloy at India Welding Expo 2026</h3>
+                <p>
+                  Meet the WAPL team and explore welding solutions, product
+                  capabilities and application-focused support.
+                </p>
+                <a href="#" class="link-arrow">View Event <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 event-col" data-status="past">
+            <article class="event-card">
+              <div class="event-image event-image-2">
+                <span>Industry Engagement</span>
+              </div>
+              <div class="event-body">
+                <div class="event-topline">
+                  <time datetime="2026-08-21">21 Aug 2026</time>
+                  <span>Customer Meet</span>
+                </div>
+                <h3>Technical Exchange with Industrial Partners</h3>
+                <p>
+                  A sample event slot for a customer or partner engagement that
+                  can later be replaced with the approved event details.
+                </p>
+                <a href="#" class="link-arrow">View Event <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 event-col" data-status="upcoming">
+            <article class="event-card">
+              <div class="event-image event-image-3">
+                <span>Upcoming</span>
+              </div>
+              <div class="event-body">
+                <div class="event-topline">
+                  <time datetime="2026-11-05">05 Nov 2026</time>
+                  <span>Exhibition</span>
+                </div>
+                <h3>WAPL Industry Showcase</h3>
+                <p>
+                  Placeholder event entry for an upcoming exhibition, seminar or
+                  technical showcase once the details are confirmed.
+                </p>
+                <a href="#" class="link-arrow">Event Details <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="media-feed section">
+      <div class="container-xxl">
+        <div class="section-head mb-4">
+          <div>
+            <span class="kicker">MEDIA UPDATES</span>
+            <h2>What's happening at Weld Alloy</h2>
+          </div>
+          <a href="blogs.html" class="link-arrow">Read Our Blogs <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <article class="media-feature">
+              <div class="media-feature-image media-feature-image-1">
+                <span>Company Update</span>
+              </div>
+              <div class="media-feature-body">
+                <time datetime="2026-09-05">05 Sep 2026</time>
+                <h3>Expanding Our Product Portfolio</h3>
+                <p>
+                  A media update slot for approved announcements covering new
+                  grades, product families, facilities or capabilities.
+                </p>
+                <a href="#" class="link-arrow">Read Update <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="media-mini-grid">
+              <article class="media-mini">
+                <div class="mini-icon"><i class="bi bi-camera"></i></div>
+                <div>
+                  <time datetime="2026-08-28">28 Aug 2026</time>
+                  <h3>Strengthening Partnerships for a Stronger Tomorrow</h3>
+                  <a href="#">Read More <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </article>
+
+              <article class="media-mini">
+                <div class="mini-icon"><i class="bi bi-mic"></i></div>
+                <div>
+                  <time datetime="2026-08-12">12 Aug 2026</time>
+                  <h3>Technical Conversations That Matter</h3>
+                  <a href="#">Read More <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </article>
+
+              <article class="media-mini">
+                <div class="mini-icon"><i class="bi bi-building"></i></div>
+                <div>
+                  <time datetime="2026-07-22">22 Jul 2026</time>
+                  <h3>Welding Support Across Industrial Applications</h3>
+                  <a href="#">Read More <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section section-tint">
+      <div class="container-xxl py-5 py-lg-5">
+        <div class="section-head mb-4">
+          <div>
+            <span class="kicker">EVENT GALLERY</span>
+            <h2>Moments from the field</h2>
+          </div>
+          <p class="section-note">
+            Replace these image blocks with approved WAPL event photography.
+          </p>
+        </div>
+
+        <div class="media-gallery">
+          <figure class="gallery-item gallery-large">
+            <div class="gallery-image gallery-1"></div>
+            <figcaption>Exhibition floor &amp; product showcase</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <div class="gallery-image gallery-2"></div>
+            <figcaption>Technical discussions</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <div class="gallery-image gallery-3"></div>
+            <figcaption>Customer engagement</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <div class="gallery-image gallery-4"></div>
+            <figcaption>Welding applications in focus</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="media-contact section">
+      <div class="container-xxl">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-8">
+            <span class="kicker">MEDIA ENQUIRIES</span>
+            <h2>Looking for WAPL media, event or company information?</h2>
+            <p>
+              Use the enquiry route for event participation, media requests,
+              approved company information, photographs or technical discussions.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="#contact" class="btn btn-wa">
+              Send an Enquiry <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container-xxl d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4">
+        <h2>Have a Welding Challenge?<br>Let's Find the Right Solution.</h2>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#" class="btn btn-white">Request a Quote <i class="bi bi-arrow-right"></i></a>
+          <a href="#" class="btn btn-outline-white">Talk to Our Experts <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-xxl">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <img src="assets/images/logo.webp" alt="Weld Alloy Product Ltd." class="footer-logo">
+          <p class="mt-3">Advanced welding consumables for a stronger, more connected world.</p>
+          <div class="social">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html">Mild Steel Electrodes</a></li>
+            <li><a href="products.html">Low Hydrogen Electrodes</a></li>
+            <li><a href="products.html">Stainless Steel Electrodes</a></li>
+            <li><a href="products.html">Hardfacing Electrodes</a></li>
+            <li><a href="products.html">Welding Wires</a></li>
+            <li><a href="products.html">SAW Wires &amp; Fluxes</a></li>
+            <li><a href="products.html" class="link-arrow">View All Products <i class="bi bi-arrow-right"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="industries.html">Steel &amp; Metal</a></li>
+            <li><a href="industries.html">Power</a></li>
+            <li><a href="industries.html">Oil &amp; Gas</a></li>
+            <li><a href="industries.html">Railways</a></li>
+            <li><a href="industries.html">Heavy Engineering</a></li>
+            <li><a href="industries.html">Mining</a></li>
+            <li><a href="industries.html" class="link-arrow">View All Industries <i class="bi bi-arrow-right"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Product Catalogue</a></li>
+            <li><a href="#">Technical Documents</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="media-events.html" class="active">Media &amp; Events</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Weld Alloy Products Ltd. All rights reserved.</span>
+        <span>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Sitemap</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+    <svg class="progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path class="progress-track" d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+      <path class="progress-bar" d="M50,1 a49,49 0 0,1 0,98 a49,49 0,1 0,-98"></path>
+    </svg>
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <a href="https://wa.me/919999386807?text=Hi%2C%20I%20want%20to%20enquired%20about%20Welding%20Products"
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const filters = document.querySelectorAll(".event-filter");
+      const items = document.querySelectorAll(".event-col");
+      let activeFilter = "all";
+
+      function updateEvents() {
+        items.forEach((item) => {
+          const visible =
+            activeFilter === "all" ||
+            item.dataset.status === activeFilter;
+          item.hidden = !visible;
+        });
+      }
+
+      filters.forEach((filter) => {
+        filter.addEventListener("click", function () {
+          filters.forEach((button) => button.classList.remove("active"));
+          filter.classList.add("active");
+          activeFilter = filter.dataset.filter;
+          updateEvents();
+        });
+      });
+    });
+  </script>
+</body>
+</html>
