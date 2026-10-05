@@ -1,0 +1,486 @@
+/* WAPL — TIG Rods page-specific styles */
+
+.tig-hero {
+  padding: 46px 0 52px;
+  background: #f4f8fc;
+  border-bottom: 1px solid var(--line);
+}
+
+.tig-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+  color: #7b8b9c;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.tig-breadcrumb a { color: var(--navy); }
+.tig-breadcrumb a:hover { color: var(--blue); }
+.tig-breadcrumb span { color: #b8c5d1; }
+
+.tig-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+  gap: 55px;
+  align-items: center;
+}
+
+.tig-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.tig-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--blue);
+  border-radius: 4px;
+}
+
+.tig-hero h1 {
+  margin: 13px 0 16px;
+  color: var(--navy);
+  font-size: clamp(40px, 5.2vw, 66px);
+  line-height: 1;
+  letter-spacing: -.045em;
+  font-weight: 800;
+}
+
+.tig-hero-copy {
+  max-width: 700px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.tig-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.tig-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.tig-text-link:hover { color: var(--blue); }
+
+.tig-hero-panel {
+  position: relative;
+  overflow: hidden;
+  min-height: 315px;
+  padding: 30px;
+  border-radius: 18px;
+  color: #fff;
+  background: linear-gradient(145deg, #0b2340, #0a8fe6);
+  box-shadow: 0 20px 45px rgba(10, 35, 65, .13);
+}
+
+.tig-hero-panel::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -130px;
+  top: -130px;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 50%;
+}
+
+.tig-hero-panel::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  left: -90px;
+  bottom: -90px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+}
+
+.tig-panel-content {
+  position: relative;
+  z-index: 1;
+}
+
+.tig-panel-label {
+  color: #a9e1f8;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.tig-panel-content h2 {
+  color: #fff;
+  font-size: 27px;
+  line-height: 1.15;
+  font-weight: 800;
+  margin: 12px 0 10px;
+}
+
+.tig-panel-content p {
+  color: #d9ebf5;
+  font-size: 11px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.tig-panel-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 23px;
+}
+
+.tig-panel-points span {
+  padding: 10px 11px;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 9px;
+  background: rgba(255,255,255,.06);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.tig-range-section {
+  padding: 72px 0 78px;
+  background: #fff;
+}
+
+.tig-range-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.tig-range-head h2 {
+  color: var(--navy);
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 800;
+  margin: 6px 0 0;
+}
+
+.tig-range-head p {
+  max-width: 500px;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.tig-range-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.tig-range-card {
+  position: relative;
+  min-height: 220px;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: #fff;
+  transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease;
+}
+
+.tig-range-card:hover {
+  transform: translateY(-4px);
+  border-color: #bfe0f3;
+  box-shadow: 0 14px 30px rgba(10, 35, 65, .08);
+}
+
+.tig-range-card::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  right: -85px;
+  bottom: -85px;
+  border-radius: 50%;
+  background: #edf7fd;
+}
+
+.tig-range-number {
+  position: absolute;
+  right: 17px;
+  top: 16px;
+  color: #b7c5d1;
+  font-size: 9px;
+  font-weight: 800;
+  z-index: 2;
+}
+
+.tig-range-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #eaf6fd;
+  color: var(--blue);
+  font-size: 19px;
+  position: relative;
+  z-index: 2;
+}
+
+.tig-range-card h3 {
+  color: var(--navy);
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 800;
+  margin: 18px 0 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.tig-range-card p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.65;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.tig-range-tag {
+  display: inline-flex;
+  margin-top: 17px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #f0f7fd;
+  color: var(--navy);
+  font-size: 9px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.tig-selection-section {
+  padding: 58px 0;
+  background: var(--tint);
+}
+
+.tig-selection-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: stretch;
+}
+
+.tig-selection-copy h2 {
+  color: var(--navy);
+  font-size: 31px;
+  line-height: 1.16;
+  font-weight: 800;
+  margin: 7px 0 12px;
+}
+
+.tig-selection-copy p {
+  max-width: 700px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.tig-selection-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.tig-selection-points div {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--navy);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.tig-selection-card {
+  padding: 28px;
+  border: 1px solid #dbe9f2;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.tig-selection-card small {
+  color: var(--blue);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.tig-selection-card h3 {
+  color: var(--navy);
+  font-size: 22px;
+  font-weight: 800;
+  margin: 8px 0 18px;
+}
+
+.tig-selection-list {
+  display: grid;
+  gap: 9px;
+}
+
+.tig-selection-list div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+  border: 1px solid #e5edf4;
+  border-radius: 9px;
+  color: var(--navy);
+  font-size: 10.5px;
+  font-weight: 800;
+}
+
+.tig-selection-list span {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #edf6fb;
+  color: var(--blue);
+  font-size: 9px;
+  flex-shrink: 0;
+}
+
+.tig-enquiry {
+  padding: 58px 0;
+  background: #fff;
+}
+
+.tig-enquiry-box {
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+  gap: 35px;
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #f4f8fc;
+}
+
+.tig-enquiry-box h2 {
+  color: var(--navy);
+  font-size: 29px;
+  font-weight: 800;
+  margin: 7px 0 12px;
+}
+
+.tig-enquiry-box p {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.tig-enquiry-note {
+  align-self: center;
+  padding: 24px;
+  border-radius: 14px;
+  color: #fff;
+  background: linear-gradient(145deg, #0b2340, #0a8fe6);
+}
+
+.tig-enquiry-note h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.tig-enquiry-note p {
+  color: #d9ebf5;
+  margin-bottom: 16px;
+}
+
+.tig-related {
+  padding: 0 0 72px;
+  background: #fff;
+}
+
+.tig-related-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tig-related-inner a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--navy);
+  background: #fff;
+  font-size: 10.5px;
+  font-weight: 800;
+  transition: .2s ease;
+}
+
+.tig-related-inner a:hover {
+  border-color: #b9dff5;
+  color: var(--blue);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 991.98px) {
+  .tig-hero-grid,
+  .tig-selection-grid,
+  .tig-enquiry-box {
+    grid-template-columns: 1fr;
+  }
+
+  .tig-range-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .tig-range-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tig-range-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tig-panel-points,
+  .tig-selection-points {
+    grid-template-columns: 1fr;
+  }
+
+  .tig-hero h1 {
+    font-size: 40px;
+  }
+}
