@@ -57,6 +57,106 @@
     }
   });
 
+  /* Product mega-menu routes are kept here so the approved index.html markup stays untouched. */
+  var productMenuRoutes = {
+    'sub-welding-consumables': {
+      'Stick Electrodes':'products/consumables/welding-consumables/stick-electrodes.html',
+      'TIG Rods':'products/consumables/welding-consumables/tig-rods.html',
+      'Solid Wires':'products/consumables/welding-consumables/solid-wires.html',
+      'Gas-Shielded Flux-Cored Wires':'products/consumables/welding-consumables/gas-shielded-flux-cored-wires.html',
+      'Self-Shielded Flux-Cored Wires':'products/consumables/welding-consumables/self-shielded-flux-cored-wires.html',
+      'Submerged Arc Wires & Fluxes':'products/consumables/welding-consumables/submerged-arc-wires-fluxes.html',
+      'Strip Cladding':'products/consumables/welding-consumables/strip-cladding.html',
+      'Wire Arc Additive Manufacturing':'products/consumables/welding-consumables/wire-arc-additive-manufacturing.html',
+      'Metal Powders':'products/consumables/welding-consumables/metal-powders.html',
+      'Arc Spraying Cored Wires':'products/consumables/welding-consumables/arc-spraying-cored-wires.html',
+      'Ceramic Weld Backing':'products/consumables/welding-consumables/ceramic-weld-backing.html'
+    },
+    'sub-brazing-consumables': {
+      'Silver Brazing Alloys':'products/consumables/brazing-consumables/silver-brazing-alloys.html',
+      'Copper-Phosphorus Rods':'products/consumables/brazing-consumables/copper-phosphorus-rods.html',
+      'Brass & Bronze Brazing Wires':'products/consumables/brazing-consumables/brass-bronze-brazing-wires.html',
+      'High Temperature Nickel Alloys':'products/consumables/brazing-consumables/high-temperature-nickel-alloys.html',
+      'Brazing Pastes & Fluxes':'products/consumables/brazing-consumables/brazing-pastes-fluxes.html'
+    },
+    'sub-finishing-chemicals': {
+      'Stainless Steel Pickling Pastes':'products/consumables/finishing-chemicals/stainless-steel-pickling-pastes.html',
+      'Spray Pickling Gels':'products/consumables/finishing-chemicals/spray-pickling-gels.html',
+      'Passivation Solutions':'products/consumables/finishing-chemicals/passivation-solutions.html',
+      'Neutralizing Rinses':'products/consumables/finishing-chemicals/neutralizing-rinses.html',
+      'Anti-Spatter Water-Based Sprays':'products/consumables/finishing-chemicals/anti-spatter-water-based-sprays.html'
+    },
+    'sub-arc-equipment': {
+      'MIG / MAG Industrial Units':'products/welding-equipment/arc-welding-machines/mig-mag-industrial-units.html',
+      'TIG AC / DC Inverters':'products/welding-equipment/arc-welding-machines/tig-ac-dc-inverters.html',
+      'MMA / Stick Arc Systems':'products/welding-equipment/arc-welding-machines/mma-stick-arc-systems.html',
+      'Multi-Process Inverters':'products/welding-equipment/arc-welding-machines/multi-process-inverters.html',
+      'Submerged Arc Power Sources':'products/welding-equipment/arc-welding-machines/submerged-arc-power-sources.html'
+    },
+    'sub-plasma-cutting': {
+      'Manual Air Plasma Cutters':'products/welding-equipment/plasma-cutting/manual-air-plasma-cutters.html',
+      'CNC High-Definition Plasma':'products/welding-equipment/plasma-cutting/cnc-high-definition-plasma.html',
+      'Plasma Gouging Systems':'products/welding-equipment/plasma-cutting/plasma-gouging-systems.html'
+    },
+    'sub-special-welding': {
+      'Stud Welding Units':'products/welding-equipment/specialized-systems/stud-welding-units.html',
+      'Resistance Spot Welders':'products/welding-equipment/specialized-systems/resistance-spot-welders.html',
+      'Orbital Pipe Welding Systems':'products/welding-equipment/specialized-systems/orbital-pipe-welding-systems.html'
+    },
+    'sub-helmets': {
+      'Auto-Darkening Helmets (TrueColor)':'products/personal-protection/welding-helmets/auto-darkening-helmets.html',
+      'Flip-Up Grinding Helmets':'products/personal-protection/welding-helmets/flip-up-grinding-helmets.html',
+      'Air-Fed PAPR Helmets':'products/personal-protection/welding-helmets/air-fed-papr-helmets.html',
+      'Replacement Lenses & Spares':'products/personal-protection/welding-helmets/replacement-lenses-spares.html'
+    },
+    'sub-clothing': {
+      'Heavy-Duty Split Cowhide Jackets':'products/personal-protection/protective-apparel/heavy-duty-split-cowhide-jackets.html',
+      'Flame Retardant Cotton Apparel':'products/personal-protection/protective-apparel/flame-retardant-cotton-apparel.html',
+      'Kevlar-Stitched TIG/MIG Gloves':'products/personal-protection/protective-apparel/kevlar-stitched-tig-mig-gloves.html',
+      'Welding Gaiters & Sleeves':'products/personal-protection/protective-apparel/welding-gaiters-sleeves.html'
+    },
+    'sub-respiratory': {
+      'Powered Air Purifying Respirators (PAPR)':'products/personal-protection/respiratory-papr/powered-air-purifying-respirators-papr.html',
+      'TH3 Particle Filters':'products/personal-protection/respiratory-papr/th3-particle-filters.html',
+      'Gas & Odor Filters':'products/personal-protection/respiratory-papr/gas-odor-filters.html'
+    },
+    'sub-torches': {
+      'Air & Water-Cooled MIG Guns':'products/accessories-tools/torches-spares/air-water-cooled-mig-guns.html',
+      'TIG Torches & Flex Heads':'products/accessories-tools/torches-spares/tig-torches-flex-heads.html',
+      'Contact Tips, Nozzles & Diffusers':'products/accessories-tools/torches-spares/contact-tips-nozzles-diffusers.html',
+      'Tungsten Electrodes (All Grades)':'products/accessories-tools/torches-spares/tungsten-electrodes-all-grades.html'
+    },
+    'sub-clamping': {
+      'Magnetic Ground Clamps':'products/accessories-tools/clamping-workholding/magnetic-ground-clamps.html',
+      'Heavy Brass Ground Clamps':'products/accessories-tools/clamping-workholding/heavy-brass-ground-clamps.html',
+      'Adjustable Fit-Up Clamps':'products/accessories-tools/clamping-workholding/adjustable-fit-up-clamps.html'
+    },
+    'sub-cleaning-tools': {
+      'Spring Handle Chipping Hammers':'products/accessories-tools/weld-cleaning-tools/spring-handle-chipping-hammers.html',
+      'Stainless Steel Wire Brushes':'products/accessories-tools/weld-cleaning-tools/stainless-steel-wire-brushes.html',
+      'Weld Seam Cleaners & Polishers':'products/accessories-tools/weld-cleaning-tools/weld-seam-cleaners-polishers.html'
+    },
+    'sub-robotics': {
+      'Turnkey Robotic Welding Cells':'products/welding-automation/robotic-welding-cells/turnkey-robotic-welding-cells.html',
+      'Collaborative Welding Robots (Cobots)':'products/welding-automation/robotic-welding-cells/collaborative-welding-robots-cobots.html',
+      'Robotic Torches & Cleaning Stations':'products/welding-automation/robotic-welding-cells/robotic-torches-cleaning-stations.html'
+    },
+    'sub-positioners': {
+      'Welding Turn Tables & Positioners':'products/welding-automation/rotators-positioners/welding-turn-tables-positioners.html',
+      'Self-Aligning Tank Rotators':'products/welding-automation/rotators-positioners/self-aligning-tank-rotators.html',
+      'Column & Boom Manipulators':'products/welding-automation/rotators-positioners/column-boom-manipulators.html'
+    }
+  };
+
+  $('.mega-tier3-panel').each(function () {
+    var $panel = $(this);
+    var routes = productMenuRoutes[$panel.attr('id')] || {};
+    $panel.find('a').each(function () {
+      var label = $.trim($(this).text());
+      if (routes[label]) $(this).attr('href', routes[label]);
+    });
+  });
+
   /* ---------- Products mega menu ---------- */
   var $megaMenuParent = $('.has-megamenu');
   var $megaMenuTrigger = $megaMenuParent.children('a');
